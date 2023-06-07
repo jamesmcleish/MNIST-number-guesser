@@ -1,0 +1,13 @@
+1. Set up Github Repo [complete]
+2. Set up router with express []
+3. Create MongoDB schema []
+4. Create Homepage component
+5. Create white board component in React and convert images drawn to .csv format []
+6. Create number prediction component []
+7. Create neural net and train on mnist set []
+8. Test with mnist-test set []
+9. Set up sending of .csv files from whiteboard to (hopefully) predictive neural net []
+9. Send predictions form neural net to react app. []
+10. Set up user verification tool on number prediction component []
+11. Start filling MongoDB schema []
+12. Start further training of neural net with user input []
