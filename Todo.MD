@@ -1,7 +1,7 @@
 1. Set up Github Repo [complete]
-2. Set up router with express []
+2. Set up router with express [complete]
 3. Create MongoDB schema []
-4. Create Homepage component
+4. Create Homepage component []
 5. Create white board component in React and convert images drawn to .csv format []
 6. Create number prediction component []
 7. Create neural net and train on mnist set []
