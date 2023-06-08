@@ -7,6 +7,10 @@ const UserSchema = new mongoose.Schema({
     prediction: { type: Boolean }
 });
 
+function arrayLengthValidator(arr) {
+    return arr.length === 784;
+  }
+
 const User = mongoose.model("User", UserSchema);
 
 module.exports = User;
