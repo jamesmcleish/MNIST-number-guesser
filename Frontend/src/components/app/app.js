@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Type a number on the whiteboard and click enter.</p>
-        <Whiteboard/>
+        <p>Draw a single digit number on the whiteboard and click enter.</p>
         <button>Click Me</button>
+        <Whiteboard/>
       </header>
     </div>
   );

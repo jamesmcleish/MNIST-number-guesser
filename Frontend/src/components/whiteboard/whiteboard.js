@@ -1,14 +1,10 @@
 import React from 'react';
-import './App.css';
-import DrawingTool from './components/drawingtool';
-import PencilTool from './components/penciltool';
-
+import PencilTool from '../pencilTool/PencilTool.js'
 
 function Whiteboard() {
-  
   return (
     <div className='Whiteboard'>
-      <DrawingTool /> //Change this line to <PencilTool /> to render pencil
+      <PencilTool />
     </div>
   );
 }
