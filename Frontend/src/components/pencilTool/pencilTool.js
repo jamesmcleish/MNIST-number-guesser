@@ -3,7 +3,7 @@ import React, { useLayoutEffect, useState, useRef } from 'react';
 var pos = { x: 0, y: 0 };
 
 const Penciltool = () => {
-  const [points, setPoints] = useState([]);
+  const [lines, setLines] = useState([]);
   const [drawing, setDrawing] = useState(false);
   const contextRef = useRef(null);
 
@@ -11,17 +11,25 @@ const Penciltool = () => {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
 
+    ctx.fillStyle = 'white';
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
     ctx.lineCap = 'round';
     ctx.strokeStyle = 'black';
     ctx.lineWidth = 10;
     contextRef.current = ctx;
 
-    points.forEach((ele) => {
-      contextRef.current.lineTo(ele.x, ele.y);
+    lines.forEach((line) => {
+      line.points.forEach((point, index) => {
+        if (index === 0) {
+          contextRef.current.moveTo(point.x, point.y);
+        } else {
+          contextRef.current.lineTo(point.x, point.y);
+        }
+      });
       contextRef.current.stroke();
     });
-  }, [points]);
+  }, [lines]);
 
   const startDrawing = (event) => {
     setDrawing(true);
@@ -30,6 +38,8 @@ const Penciltool = () => {
     const rect = canvas.getBoundingClientRect();
     pos.x = clientX - rect.left; // Adjust x coordinate based on canvas position
     pos.y = clientY - rect.top;  // Adjust y coordinate based on canvas position
+
+    setLines((prevLines) => [...prevLines, { points: [pos] }]);
   };
 
   const finishDrawing = () => {
@@ -39,15 +49,22 @@ const Penciltool = () => {
   const draw = (event) => {
     if (!drawing) return;
 
-    setPoints((state) => [...state, pos]);
-    contextRef.current.lineTo(pos.x, pos.y);
-    contextRef.current.stroke();
-
     const { clientX, clientY } = event;
     const canvas = document.getElementById('canvas');
     const rect = canvas.getBoundingClientRect();
     pos.x = clientX - rect.left; // Adjust x coordinate based on canvas position
     pos.y = clientY - rect.top;  // Adjust y coordinate based on canvas position
+
+    setLines((prevLines) => {
+      const lastLine = prevLines[prevLines.length - 1];
+      const newPoints = [...lastLine.points, pos];
+      const newLines = [...prevLines];
+      newLines[newLines.length - 1] = { points: newPoints };
+      return newLines;
+    });
+
+    contextRef.current.lineTo(pos.x, pos.y);
+    contextRef.current.stroke();
   };
 
   return (

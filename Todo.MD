@@ -3,7 +3,7 @@
 3. Create MongoDB schema [complete]
 4. Create Homepage component [complete]
 5. Create white board component in React [complete]
-5. (Continued) Turn whiteboard white, clean up unnecessary code, change size to represent the 28x28 mnist set. []
+5. (Continued) Turn whiteboard white, clean up unnecessary code, change size to represent the 28x28 mnist set. [complete]
 6. Convert images drawn to .csv format []
 7. Create number prediction component []
 8. Create neural net and train on mnist set []
