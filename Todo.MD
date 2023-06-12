@@ -8,7 +8,7 @@
 7. Create number prediction component []
 8. Create neural net and train on mnist set []
 9. Test with mnist-test set []
-10. Set up sending of .csv files from whiteboard to (hopefully) predictive neural net []
+10. Set up sending of .csv files from whiteboard to (hopefully) predictive neural net, cut off 1.48 div height from bottom of whiteboard div []
 11. Send predictions form neural net to react app. []
 12. Set up user verification tool on number prediction component []
 13. Start filling MongoDB schema []

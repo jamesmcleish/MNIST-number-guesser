@@ -26,22 +26,30 @@ const Penciltool = () => {
   const startDrawing = (event) => {
     setDrawing(true);
     const { clientX, clientY } = event;
-    pos.x = clientX;
-    pos.y = clientY;
+    const canvas = document.getElementById('canvas');
+    const rect = canvas.getBoundingClientRect();
+    pos.x = clientX - rect.left; // Adjust x coordinate based on canvas position
+    pos.y = clientY - rect.top;  // Adjust y coordinate based on canvas position
   };
+
   const finishDrawing = () => {
     setDrawing(false);
   };
+
   const draw = (event) => {
     if (!drawing) return;
 
     setPoints((state) => [...state, pos]);
-    contextRef.current.moveTo(pos.x, pos.y);
+    contextRef.current.lineTo(pos.x, pos.y);
+    contextRef.current.stroke();
 
     const { clientX, clientY } = event;
-    pos.x = clientX;
-    pos.y = clientY;
+    const canvas = document.getElementById('canvas');
+    const rect = canvas.getBoundingClientRect();
+    pos.x = clientX - rect.left; // Adjust x coordinate based on canvas position
+    pos.y = clientY - rect.top;  // Adjust y coordinate based on canvas position
   };
+
   return (
     <canvas
       id='canvas'
