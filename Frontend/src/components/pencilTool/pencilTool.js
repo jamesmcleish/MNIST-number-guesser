@@ -67,6 +67,22 @@ const Penciltool = () => {
     contextRef.current.stroke();
   };
 
+  const convertToCSV = () => {
+    let csvContent = 'x,y\n';
+
+    lines.forEach((line) => {
+      line.points.forEach((point) => {
+        csvContent += `${point.x},${point.y}\n`;
+      });
+    });
+
+    // Create a temporary element to download the CSV file
+    const element = document.createElement('a');
+    element.href = URL.createObjectURL(new Blob([csvContent], { type: 'text/csv' }));
+    element.download = 'drawing.csv';
+    element.click();
+  };
+
   return (
     <canvas
       id='canvas'
