@@ -11,8 +11,7 @@ app.use(express.json());
 app.post('/', (req, res) => {
     try {
       const csvData = req.body.csvData; 
-
-      fs.writeFileSync('data.csv', csvData);
+      console.log(csvData)
       
       res.status(200).json({ message: 'CSV data received successfully' });
     } catch (error) {
