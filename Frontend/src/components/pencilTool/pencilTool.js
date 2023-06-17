@@ -17,7 +17,7 @@ const Penciltool = () => {
     
     ctx.lineCap = 'round';
     ctx.strokeStyle = 'white';
-    ctx.lineWidth = 20;
+    ctx.lineWidth =30;
     contextRef.current = ctx;
 
     lines.forEach((line) => {
@@ -99,8 +99,8 @@ const Penciltool = () => {
     const handleMouseUp = () => {
       const canvas = document.getElementById('canvas');
       const imageArray = convertCanvasToImageArray(canvas);
-
-      fetch('http://localhost:4000', {
+  
+      fetch('http://127.0.0.1:5000', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -112,16 +112,16 @@ const Penciltool = () => {
           console.log(responseData);
         })
         .catch((error) => {
-          console.log(`error: ${error}`);
+          console.log("hello");
         });
     };
-
+  
     document.addEventListener('mouseup', handleMouseUp);
-
+  
     return () => {
       document.removeEventListener('mouseup', handleMouseUp);
     };
-  }, []);
+  }, []);  
 
   return (
     <canvas
