@@ -99,21 +99,20 @@ const Penciltool = () => {
     const handleMouseUp = () => {
       const canvas = document.getElementById('canvas');
       const imageArray = convertCanvasToImageArray(canvas);
-      console.log(imageArray)
 
       fetch('http://localhost:4000', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ csvData: convertCanvasToImageArray(canvas) }),
+        body: JSON.stringify({ csvData: imageArray }),
       })
         .then((response) => response.json())
         .then((responseData) => {
-          console.log("success");
+          console.log(responseData);
         })
         .catch((error) => {
-          console.log("error");
+          console.log(`error: ${error}`);
         });
     };
 
