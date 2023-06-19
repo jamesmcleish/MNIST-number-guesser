@@ -31,7 +31,7 @@
 <ol>
   <li>[Optional] Set up a virtual environment to isolate the Python dependencies.</li>
   <li>Install the required Python packages:<br>
-    <code>pip3 install tensorflow keras numpy</code></li>
+    <code>pip3 install tensorflow keras numpy Flask CORS</code></li>
   <li>Run the backend server:<br>
     <code>python3 app.py</code></li>
 </ol>
@@ -45,6 +45,7 @@
   <li>HTML5 Canvas API</li>
   <li>Node.js</li>
   <li>Express.js</li>
+  <li>Flask</li>
 </ul>
 
 <h2>Contributing</h2>
