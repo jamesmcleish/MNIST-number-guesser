@@ -110,9 +110,10 @@ const Penciltool = () => {
         .then((response) => response.json())
         .then((responseData) => {
           console.log(responseData);
+          localStorage.setItem('responseData', responseData);
         })
         .catch((error) => {
-          console.log("hello");
+          console.log(error);
         });
     };
   
