@@ -12,12 +12,12 @@ const Penciltool = () => {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
 
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = 'white';
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
     ctx.lineCap = 'round';
     ctx.strokeStyle = 'white';
-    ctx.lineWidth =30;
+    ctx.lineWidth = 25;
     contextRef.current = ctx;
 
     lines.forEach((line) => {
