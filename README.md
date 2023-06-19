@@ -11,7 +11,7 @@
 </ul>
 
 <h2>Demo</h2>
-<!-- Insert GIF or link to a demo video showcasing the interactive whiteboard in action -->
+<img src="public/board_demo.png" alt="Demo" />
 
 <h2>Installation</h2>
 <p>To run the interactive whiteboard locally, follow these steps:</p>
