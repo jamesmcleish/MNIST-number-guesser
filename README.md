@@ -51,7 +51,7 @@
 <p>Contributions are welcome! If you encounter any bugs or have suggestions for additional features, please open an issue or submit a pull request. Make sure to follow the project's code style and guidelines.</p>
 
 <h2>License</h2>
-<p>[Insert the appropriate license for your project]</p>
+<p>MIT</p>
 
 <h2>Acknowledgments</h2>
 <ul>
