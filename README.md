@@ -31,9 +31,9 @@
 <ol>
   <li>[Optional] Set up a virtual environment to isolate the Python dependencies.</li>
   <li>Install the required Python packages:<br>
-    <code>pip install tensorflow keras numpy</code></li>
+    <code>pip3 install tensorflow keras numpy</code></li>
   <li>Run the backend server:<br>
-    <code>python server.py</code></li>
+    <code>python3 app.py</code></li>
 </ol>
 <p>The server will start and load the trained CNN model.</p>
 
