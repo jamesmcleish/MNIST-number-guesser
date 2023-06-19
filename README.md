@@ -5,9 +5,8 @@
 <h2>Features</h2>
 <ul>
   <li>Draw and write on a virtual whiteboard using various colors and brush sizes.</li>
-  <li>Erase specific parts of the drawing or clear the entire whiteboard.</li>
-  <li>Real-time collaborative drawing with multiple users.</li>
   <li>Digit recognition using a trained CNN model to identify handwritten digits.</li>
+  <li>Note to user: this board has low prediction accuracy</li>
 </ul>
 
 <h2>Demo</h2>
