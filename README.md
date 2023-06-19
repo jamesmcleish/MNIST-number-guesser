@@ -48,7 +48,7 @@
 </ul>
 
 <h2>Contributing</h2>
-<p>Contributions are welcome! If you encounter any bugs or have suggestions for additional features, please open an issue or submit a pull request. Make sure to follow the project's code style and guidelines.</p>
+<p>Contributions are welcome! Any suggestions for increasing accuracy on this board are welcome. Fork and open a pull request if you wish.</p>
 
 <h2>License</h2>
 <p>MIT</p>
