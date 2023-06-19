@@ -6,7 +6,7 @@
 <ul>
   <li>Draw and write on a virtual whiteboard using various colors and brush sizes.</li>
   <li>Digit recognition using a trained CNN model to identify handwritten digits.</li>
-  <li>Note to user: this board has low prediction accuracy</li>
+  <li>Note to user: this board has low prediction accuracy, I plan to add extra training data to the backend at some point along with making changes to the way data is sent from the whiteboard to the CNN</li>
 </ul>
 
 <h2>Demo</h2>
