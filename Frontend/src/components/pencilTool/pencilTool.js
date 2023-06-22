@@ -87,7 +87,7 @@ const Penciltool = () => {
       for (let j = 0; j < 28; j++) {
         const pixelIndex = Math.round((i * rowSize * 4) * canvas.width + (j * resizeFactor));
         const pixelValue = imageArray[pixelIndex];
-        resizedImageArray.push(pixelValue > 200 ? 255 : 0);
+        resizedImageArray.push(pixelValue > 150 ? 255 : 0);
       }
     }
   
@@ -99,11 +99,12 @@ const Penciltool = () => {
     const handleMouseUp = () => {
       const canvas = document.getElementById('canvas');
       const imageArray = convertCanvasToImageArray(canvas);
+      console.log(JSON.stringify(imageArray))
   
       fetch('http://127.0.0.1:5000', { 
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({ csvData: imageArray }),
       })
