@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
-import Penciltool from '../PencilTool/PencilTool';
+import Penciltool from '../PencilTool/pencilTool.js';
 
 function App() {
   const [prediction, setPrediction] = useState('');
