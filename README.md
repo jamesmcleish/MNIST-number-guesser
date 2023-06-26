@@ -5,9 +5,8 @@
 <h2>Features</h2>
 <ul>
   <li>Draw and write on a virtual whiteboard using various colors and brush sizes.</li>
-  <li>Erase specific parts of the drawing or clear the entire whiteboard.</li>
-  <li>Real-time collaborative drawing with multiple users.</li>
   <li>Digit recognition using a trained CNN model to identify handwritten digits.</li>
+  <li>Note to user: this board has low prediction accuracy, I plan to add extra training data to the backend at some point along with making changes to the way data is sent from the whiteboard to the CNN</li>
 </ul>
 
 <h2>Demo</h2>
@@ -32,9 +31,9 @@
 <ol>
   <li>[Optional] Set up a virtual environment to isolate the Python dependencies.</li>
   <li>Install the required Python packages:<br>
-    <code>pip install tensorflow keras numpy</code></li>
+    <code>pip3 install tensorflow keras numpy Flask CORS</code></li>
   <li>Run the backend server:<br>
-    <code>python server.py</code></li>
+    <code>python3 app.py</code></li>
 </ol>
 <p>The server will start and load the trained CNN model.</p>
 
@@ -46,13 +45,14 @@
   <li>HTML5 Canvas API</li>
   <li>Node.js</li>
   <li>Express.js</li>
+  <li>Flask</li>
 </ul>
 
 <h2>Contributing</h2>
-<p>Contributions are welcome! If you encounter any bugs or have suggestions for additional features, please open an issue or submit a pull request. Make sure to follow the project's code style and guidelines.</p>
+<p>Contributions are welcome! Any suggestions for increasing accuracy on this board are welcome. Fork and open a pull request if you wish.</p>
 
 <h2>License</h2>
-<p>[Insert the appropriate license for your project]</p>
+<p>MIT</p>
 
 <h2>Acknowledgments</h2>
 <ul>
