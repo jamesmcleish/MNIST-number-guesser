@@ -18,3 +18,4 @@ def predict_number(pixel_values):
     predicted_number = np.argmax(prediction)
     
     return predicted_number
+
