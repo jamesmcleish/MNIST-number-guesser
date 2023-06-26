@@ -80,28 +80,6 @@ const Penciltool = () => {
         const grayscale = Math.round(0.2989 * r + 0.587 * g + 0.114 * b);
         imageArray.push(grayscale);
       }
-    // const resizedImageArray = [];
-
-
-    // const resizeFactor = Math.sqrt(imageArray.length / 784);
-    // const rowSize = canvas.width / 28;
-    // for (let i = 0; i < 28; i++) {
-    //   for (let j = 0; j < 28; j++) {
-    //     const pixelIndex = Math.round((i * rowSize * 4) * canvas.width + (j * resizeFactor));
-    //     const pixelValue = imageArray[pixelIndex];
-    //     resizedImageArray.push(pixelValue > 150 ? 255 : 0);
-    //   }
-    // }
-    // array size 78400
-    // for (let i=0; i<784; i++) { //iterates 784 times for 784 pixels in a 28x28 image
-      // now to go over pixels ([0]+[1]+..+[9]+[280]+..+[289]..+)/100 until the top left hand 10x10 pixels are averaged
-      // now push this value to resized pixel array
-      // iterate
-    // }
-
-
-    // Need to parcel each 10x10 area, add up the pixel values, take an average and push that to resized image array
-    
     return scaleDownArray(imageArray, 784);
   }
 
@@ -113,19 +91,16 @@ const Penciltool = () => {
     for (let i = 0; i < originalSize; i += scaleFactor) {
       for (let j = 0; j < originalSize; j += scaleFactor) {
         let sum = 0;
-  
         for (let x = 0; x < scaleFactor; x++) {
           for (let y = 0; y < scaleFactor; y++) {
             const index = Math.floor(i + x) * originalSize + Math.floor(j + y);
             sum += originalArray[index];
           }
         }
-  
         const average = Math.round(sum / (scaleFactor * scaleFactor));
         scaledArray.push(average);
       }
     }
-  
     return scaledArray;
   }
 
